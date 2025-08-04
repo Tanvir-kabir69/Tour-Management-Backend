@@ -1,5 +1,5 @@
 import { ErrorRequestHandler } from "express";
-import { TGenericErrorResponse } from "../../interfaces/genericErrorResponse";
+import { TGenericErrorResponse } from "../../interfacesAndTpes/genericErrorResponse";
 import { envVars } from "../../config";
 import handleZodValidationError from "../errorHandlers/zodValidationErrorHandlers";
 import { ZodError } from "zod";

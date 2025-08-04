@@ -13,18 +13,13 @@ export enum IsActive {
   BLOCKED = "BLOCKED",
 }
 
-//auth providers
-/**
- * email, password
- * google authentication
- */
-
 export interface IAuthProvider {
-  provider: string; // "Google", "Credential"
+  provider: "credential" | "google"; // "Google", "Credential"
   providerId: string;
 }
 
 export interface IUser {
+  _id?: Types.ObjectId;
   name: string; // required
   email: string; // required
   password?: string;
@@ -33,7 +28,7 @@ export interface IUser {
   address?: string;
   isDeleted?: string;
   isActive?: IsActive;
-  isVerified?: string;
+  isVerified?: boolean;
   role: Role; // default
   auths?: IAuthProvider[];
   bookings?: Types.ObjectId[];

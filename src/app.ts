@@ -4,6 +4,7 @@ import router from "./app/router";
 import notFountRoute from "./app/utils/middlewares/notFoundRoute";
 import globalErrorHandler from "./app/utils/middlewares/globalErrorHandlers";
 import getAController from "./app/utils/getAController";
+import cookieParser from "cookie-parser";
 
 const app: Application = express();
 
@@ -15,6 +16,7 @@ app.use(
     credentials: true,
   })
 );
+app.use(cookieParser());
 
 const baseApi: string = "/api/v1";
 
