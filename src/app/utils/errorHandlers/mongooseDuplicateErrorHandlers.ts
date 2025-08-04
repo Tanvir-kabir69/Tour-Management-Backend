@@ -2,7 +2,7 @@ import { MongoServerError } from "mongodb";
 import {
   TErrorSources,
   TGenericErrorResponse,
-} from "../../interfaces/genericErrorResponse";
+} from "../../interfacesAndTpes/genericErrorResponse";
 
 const handleMongooseDuplicateError = (
   err: MongoServerError
